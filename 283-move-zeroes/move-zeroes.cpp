@@ -8,7 +8,7 @@ public:
                 arr[insertpos++] = arr[i];
             }
         }
-        for(int i = insertpos;i<n;i++ ){
+        for(int i = insertpos;i<n;i++){
             arr[i] = 0;
         }
     }
