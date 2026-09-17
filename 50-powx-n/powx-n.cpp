@@ -4,14 +4,14 @@ public:
         long long N = n;
         if(N<0){
             x = 1/x;
-             N = -N;
+            N = -N;
         }
         return solve(x,N);
     }
-    double solve(double x,long long N){
+    double solve(double x, long long N){
         if(N==0) return 1;
         double half = solve(x,N/2);
-        if(N%2==0)  return half*half;
+        if(N%2==0) return half*half;
         else return half*half*x;
     }
 };
