@@ -13,7 +13,7 @@ public:
                 i = j;
             }
         }
-        if(i != NULL)  i->next = NULL;
+        if(i != NULL) i->next = NULL;
         return head;
     }
 };
