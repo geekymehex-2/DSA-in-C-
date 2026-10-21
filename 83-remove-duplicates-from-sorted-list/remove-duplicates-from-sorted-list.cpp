@@ -3,7 +3,7 @@ class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
         ListNode* i = head;
-        ListNode* j = head;
+        ListNode*  j = head;
         while(j != NULL){
             if(i->val == j->val){
                 j = j->next;
