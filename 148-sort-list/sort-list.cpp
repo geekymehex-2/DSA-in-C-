@@ -6,7 +6,7 @@ public:
         ListNode* i = a;
         ListNode* j = b;
         ListNode* k = dummy;
-        while(i != NULL && j != NULL){
+        while(i !=  NULL && j !=  NULL){
             if(i->val < j->val){
                 k->next = i;
                 i = i->next;
@@ -17,15 +17,15 @@ public:
             }
             k = k->next;
         }
-        if(i == NULL) k->next = j;
+        if(i==NULL) k->next = j;
         else k->next = i;
         return dummy->next;
     }
     ListNode* sortList(ListNode* head) {
-        if(head == NULL or head->next ==  NULL) return head;
+        if(head == NULL or head->next == NULL) return head;
         ListNode* slow = head;
         ListNode* fast = head;
-        while(fast->next != NULL && fast->next->next != NULL){
+        while(fast->next != NULL &&  fast->next->next != NULL){
             slow = slow->next;
             fast = fast->next->next;
         }
