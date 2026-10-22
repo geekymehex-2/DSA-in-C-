@@ -17,7 +17,7 @@ public:
             }
             k = k->next;
         }
-        if(i==NULL) k->next = j;
+        if(i == NULL) k->next = j;
         else k->next = i;
         return dummy->next;
     }
