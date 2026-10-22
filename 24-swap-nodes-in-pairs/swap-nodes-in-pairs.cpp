@@ -2,7 +2,7 @@
 class Solution {
 public:
     ListNode* swapPairs(ListNode* head) {
-        if(head == NULL or head->next == NULL) return head;
+        if(head == NULL or head->next ==  NULL) return head;
         ListNode* a = head;
         ListNode* prev = NULL;
         while(a != NULL){
