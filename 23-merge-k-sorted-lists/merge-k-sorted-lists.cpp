@@ -25,7 +25,7 @@ public:
         if(arr.size() == 0) return NULL;
         vector<ListNode*> temp;
         while(arr.size() + temp.size() > 1){
-            while(arr.size()  > 1){
+            while(arr.size() > 1){
                 ListNode* a = arr[arr.size()-1];
                 arr.pop_back();
                 ListNode* b = arr[arr.size()-1];
@@ -33,7 +33,7 @@ public:
                 ListNode* c = merge(a,b);
                 temp.push_back(c);
             }
-            while(temp.size()  > 1){
+            while(temp.size() > 1){
                 ListNode* a = temp[temp.size()-1];
                 temp.pop_back();
                 ListNode* b = temp[temp.size()-1];
@@ -41,12 +41,12 @@ public:
                 ListNode* c = merge(a,b);
                 arr.push_back(c);
             }
-            if(arr.size() == 1 && temp.size() ==1){
+            if(arr.size() == 1 && temp.size()  == 1) {
                 temp.push_back(arr[0]);
                 arr.pop_back();
             }
         }
-        if(arr.size() != 0) return arr[0];
+        if(arr.size()  != NULL) return arr[0];
         else return temp[0];
     }
 };
