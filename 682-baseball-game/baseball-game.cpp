@@ -4,9 +4,7 @@ public:
         stack<int> st;
         for(string op : arr){
             if(op == "C") st.pop();
-            else if(op == "D"){
-                st.push(2*st.top());
-            }
+            else if(op == "D") st.push(2*st.top());
             else if(op == "+"){
                 int x = st.top();
                 st.pop();
@@ -14,11 +12,8 @@ public:
                 st.push(x);
                 st.push(x+y);
             }
-            else{
-                st.push(stoi(op));
-            }
+            else st.push(stoi(op));
         }
-
         int sum = 0;
         while(st.size() != 0){
             sum += st.top();
