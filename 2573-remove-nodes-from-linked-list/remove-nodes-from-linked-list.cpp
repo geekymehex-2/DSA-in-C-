@@ -2,8 +2,8 @@
 class Solution {
 public:
     ListNode* reverse(ListNode* head){
-        ListNode* prev = NULL;
         ListNode* curr = head;
+        ListNode* prev = NULL;
         while(curr != NULL){
             ListNode* fwd = curr->next;
             curr->next = prev;
@@ -22,7 +22,7 @@ public:
         }
         ListNode* dummy = new ListNode(-1);
         temp = dummy;
-        while(st.size() > 0){
+        while(st.size()>0){
             ListNode* top = st.top();
             st.pop();
             temp->next = top;
