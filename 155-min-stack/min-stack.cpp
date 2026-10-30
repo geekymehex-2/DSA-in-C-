@@ -1,5 +1,5 @@
 class MinStack {
-    stack<long long>  st;
+    stack<long long> st;
     long long mn;
 public:
     MinStack() {
@@ -8,7 +8,7 @@ public:
     
     void push(int value) {
         long long val = value;
-        if(st.size() == 0){
+        if(st.size()==0){
             st.push(val);
             mn = val;
         }
@@ -40,12 +40,3 @@ public:
         return mn;
     }
 };
-
-/**
- * Your MinStack object will be instantiated and called as such:
- * MinStack* obj = new MinStack();
- * obj->push(value);
- * obj->pop();
- * int param_3 = obj->top();
- * int param_4 = obj->getMin();
- */
