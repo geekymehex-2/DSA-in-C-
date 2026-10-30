@@ -1,5 +1,5 @@
 class MinStack {
-    stack<long long> st;
+    stack<long long>  st;
     long long mn;
 public:
     MinStack() {
@@ -13,7 +13,7 @@ public:
             mn = val;
         }
         else{
-            if(val > mn) st.push(val);
+            if(val >= mn) st.push(val);
             else{
                 st.push(val+(val-mn));
                 mn = val;
