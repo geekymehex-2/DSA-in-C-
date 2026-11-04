@@ -1,7 +1,7 @@
 class Solution {
 public:
     string predictPartyVictory(string senate) {
-        int n = senate.size();
+        int  n = senate.size();
         queue<int> qR;
         queue<int> qD;
         for(int i=0;i<n;i++){
@@ -9,15 +9,15 @@ public:
             else qD.push(i);
         }
         int idx = n;
-        while(qR.size() > 0 && qD.size() > 0){
+        while(qR.size()>0 && qD.size()>0){
             if(qR.front() < qD.front()){
-                qD.pop();
                 qR.pop();
+                qD.pop();
                 qR.push(idx++);
             }
             else{
-                qR.pop();
                 qD.pop();
+                qR.pop();
                 qD.push(idx++);
             }
         }
