@@ -2,10 +2,10 @@
 class Solution {
 public:
     class pair{
-    public:
+        public:
         TreeNode* node;
         int level;
-        pair(TreeNode* node,int level){
+        pair(TreeNode* node, int level){
             this->node = node;
             this->level = level;
         }
