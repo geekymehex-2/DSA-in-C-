@@ -1,7 +1,7 @@
 
 class Solution {
 public:
-    void dfs(TreeNode* root,vector<TreeNode*>& ans){
+    void dfs(TreeNode* root, vector<TreeNode*>& ans){
         if(root == NULL) return;
         ans.push_back(root);
         dfs(root->left,ans);
