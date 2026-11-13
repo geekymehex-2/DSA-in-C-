@@ -1,7 +1,7 @@
 
 class Solution {
 public:
-    TreeNode* convert(vector<int>& arr, int lo, int hi){
+    TreeNode* convert(vector<int>& arr,int lo,int hi){
         if(lo > hi) return NULL;
         int mid = (lo+hi)/2;
         TreeNode* root = new TreeNode(arr[mid]);
