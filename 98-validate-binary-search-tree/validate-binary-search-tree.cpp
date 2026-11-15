@@ -12,15 +12,14 @@ public:
         Triplet left = solve(root->left);
         Triplet right = solve(root->right);
         long long val = root->val;
-        long long mx = max(val, max(left.mx,right.mx));
+        long long mx = max(val , max(left.mx,right.mx));
         long long mn = min(val , min(left.mn,right.mn));
         bool isBST = (val > left.mx && val < right.mn && left.isBST && right.isBST);
         return {mx,mn,isBST};
     }
-    bool isValidBST(TreeNode* root) {
+     bool isValidBST(TreeNode* root) {
         return solve(root).isBST;
     }
-
 
 
 
