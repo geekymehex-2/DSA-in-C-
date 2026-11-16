@@ -1,15 +1,14 @@
 
 class Solution {
 public:
-    void dfs(TreeNode* root, string path,vector<string>& arr){
-        if(root == NULL) return;
-        path = path + to_string(root->val);
-        
+    void dfs(TreeNode* root,string path,vector<string>& arr){
+        if(root == NULL)  return;
+        path += to_string(root->val);
         if(root->left == NULL && root->right == NULL){
             arr.push_back(path);
             return;
         }
-        path = path + "->";
+        path += "->";
         dfs(root->left,path,arr);
         dfs(root->right,path,arr);
     }
