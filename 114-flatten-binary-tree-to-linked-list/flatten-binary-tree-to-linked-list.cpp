@@ -1,20 +1,38 @@
 
 class Solution {
 public:
-    //Method 2->
+    //Method 3->
     void flatten(TreeNode* root) {
-        if(root == NULL) return;
-        flatten(root->left);
-        flatten(root->right);
-        TreeNode* left = root->left;
-        TreeNode* right = root->right;
-        root->left = NULL;
-        if(left != NULL) root->right = left;
-        else root->right = right;
-        TreeNode* temp = left;
-        while(temp != NULL && temp->right != NULL) temp = temp->right;
-        if(temp != NULL) temp->right = right;
+       TreeNode* curr = root;
+       while(curr != NULL){
+        if(curr->left != NULL){
+            TreeNode* pred = curr->left;
+            while(pred->right != NULL && pred->right != curr)
+                pred = pred->right;
+            pred->right = curr->right;
+            curr->right = curr->left;
+            curr->left = NULL;
+        }
+        else{
+            curr = curr->right;
+        }
+       }
     }
+
+    //Method 2->
+    // void flatten(TreeNode* root) {
+    //     if(root == NULL) return;
+    //     flatten(root->left);
+    //     flatten(root->right);
+    //     TreeNode* left = root->left;
+    //     TreeNode* right = root->right;
+    //     root->left = NULL;
+    //     if(left != NULL) root->right = left;
+    //     else root->right = right;
+    //     TreeNode* temp = left;
+    //     while(temp != NULL && temp->right != NULL) temp = temp->right;
+    //     if(temp != NULL) temp->right = right;
+    // }
 
 
 
